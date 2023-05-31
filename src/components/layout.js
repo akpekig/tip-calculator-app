@@ -22,9 +22,9 @@ const Layout = ({ children }) => {
   `);
 
   return (
-    <div className="box-border flex h-full min-h-screen flex-col flex-nowrap bg-neutral-200 desktop:items-center desktop:justify-center desktop:gap-20 desktop:pb-64 desktop:pt-40">
+    <div className="box-border flex h-full min-h-screen flex-col flex-nowrap bg-neutral-200 desktop:items-center desktop:justify-center desktop:gap-20 desktop:pb-24 desktop:pt-10">
       <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
-      <main className="box-border flex h-full flex-grow items-stretch rounded-t-3xl bg-white p-10 desktop:max-h-[30rem] desktop:w-[57.5rem] desktop:rounded-3xl">
+      <main className="box-border flex h-full flex-grow items-stretch rounded-t-2xl bg-white px-6 py-8 font-body text-2xl desktop:max-h-[25.75rem] desktop:w-[50rem] desktop:rounded-2xl desktop:shadow-2xl desktop:shadow-primary/40">
         {children}
       </main>
     </div>
