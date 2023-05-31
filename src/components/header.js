@@ -3,9 +3,9 @@ import { Link } from "gatsby";
 import Logo from "@src/images/logo.svg";
 
 const Header = ({ siteTitle }) => (
-  <header className="py-10 box-border">
+  <header className="box-border py-10 desktop:py-0">
     <Link to="/" aria-label={siteTitle}>
-      <Logo className="w-[5.5rem] mx-auto" aria-hidden="true" />
+      <Logo className="mx-auto w-[5.5rem]" aria-hidden="true" />
     </Link>
   </header>
 );
