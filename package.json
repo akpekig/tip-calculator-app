@@ -19,6 +19,8 @@
     "tailwindcss": "^3.3.2"
   },
   "devDependencies": {
+    "gatsby-plugin-alias-imports": "^1.0.5",
+    "gatsby-plugin-react-svg": "^3.3.0",
     "gh-pages": "^5.0.0",
     "prettier": "^2.8.8",
     "pretty-quick": "^3.1.3"

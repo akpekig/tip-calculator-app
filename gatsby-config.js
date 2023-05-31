@@ -7,9 +7,11 @@
 /**
  * @type {import('gatsby').GatsbyConfig}
  */
+const path = require("path");
+
 module.exports = {
   siteMetadata: {
-    title: `Tip Calculator App`,
+    title: `Splitter`,
     description: `A solution to Frontend Mentor's Tip Calculator App challenge.`,
     author: `@akpekig`,
     siteUrl: `https://akpekig.github.io/tip-calculator-app/`,
@@ -39,5 +41,24 @@ module.exports = {
       },
     },
     `gatsby-plugin-postcss`,
+    {
+      resolve: "gatsby-plugin-react-svg",
+      options: {
+        rule: {
+          include: /images\/.*\.svg/,
+        },
+      },
+    },
+    {
+      resolve: "gatsby-plugin-alias-imports",
+      options: {
+        alias: {
+          "@root": path.resolve(__dirname),
+          "@src": path.resolve(__dirname, "src"),
+          "@components": path.resolve(__dirname, "src/components"),
+        },
+        extensions: ["js"],
+      },
+    },
   ],
 };
