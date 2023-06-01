@@ -56,6 +56,7 @@ const IndexPage = () => (
         inputType={"text"}
         title={"Number of People"}
         placeholder={"0"}
+        integer={true}
         extraClassName={"desktop:mt-8"}
       />
       <section

@@ -17,6 +17,7 @@ module.exports = {
           500: "hsl(186, 14%, 43%)",
           600: "hsl(183, 100%, 15%)",
         },
+        error: "	hsl(11, 75%, 61%)",
       },
     },
     fontFamily: {
