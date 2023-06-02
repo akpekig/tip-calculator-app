@@ -52,16 +52,25 @@ const IndexPage = () => {
     /**
      * Calculate total and tips per person.
      */
-    if (people > 0 && bill > 0) {
-      const perPerson = bill / people;
-      if (perPerson > Number.MAX_SAFE_INTEGER) {
-        setTotalResult("Too large!");
+    if (bill > 0 && tip > 0 && tip <= 100 && people > 0) {
+      const tipAmount = ((tip / 100) * bill) / people;
+      const totalAmount = bill / people + tipAmount;
+
+      /* Prevent negative and positive infinity values */
+      if (tipAmount < Number.MIN_SAFE_INTEGER) {
+        setTipResult("Too small!");
+      } else if (tipAmount > Number.MAX_SAFE_INTEGER) {
         setTipResult("Too large!");
       } else {
-        setTotalResult(perPerson);
-        if (tip > 0 && tip <= 100) {
-          setTipResult((tip / 100) * perPerson);
-        }
+        setTipResult(tipAmount);
+      }
+
+      if (totalAmount < Number.MIN_SAFE_INTEGER) {
+        setTotalResult("Too small!");
+      } else if (totalAmount > Number.MAX_SAFE_INTEGER) {
+        setTotalResult("Too large!");
+      } else {
+        setTotalResult(totalAmount);
       }
     }
   }, [bill, tip, people]);
